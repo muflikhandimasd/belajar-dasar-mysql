@@ -78,3 +78,7 @@ SELECT * FROM `barangs`;
 -- ! MEMBUAT ULANG TABLE
 -- ? Command : TRUNCATE nama_table;
 TRUNCATE barangs;
+
+-- ! MENGHAPUS TABLE
+-- ? Command : DROP TABLE nama_table;
+DROP TABLE barangs;
