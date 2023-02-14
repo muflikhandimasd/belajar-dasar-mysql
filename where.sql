@@ -39,4 +39,22 @@ WHERE description IS NOT NULL;
 SELECT * FROM products
 WHERE price BETWEEN 10000 and 20000;
 
--- 02:27:00
+-- ! IN
+SELECT * FROM products
+WHERE category = 'Makanan' OR category = 'Minuman';
+-- ? Gunakan Command IN
+SELECT * FROM products
+WHERE category IN('Makanan', 'Minuman');
+
+
+-- ! ORDER BY
+SELECT id,category,name FROM products ORDER BY category DESC;
+SELECT id,category,price,name FROM products ORDER BY category ASC, price DESC;
+
+
+-- ! LIMIT
+SELECT * FROM products ORDER BY id LIMIT 2;
+
+-- ! SKIP QUERY
+SELECT * FROM products ORDER BY id LIMIT 1,2;
+-- ? Diskip data 1, trus dilimit 2
